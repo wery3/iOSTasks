@@ -18,22 +18,20 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateState();
+        updateState()
 
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
         view.addGestureRecognizer(tap)
     }
 
     @IBAction func registerClicked(_ sender: Any) {
-        guard let username = textField.text ,let password = passField.text, username != "", password != "" else
-        {
+        guard let username = textField.text ,let password = passField.text, !username.isEmpty, !password.isEmpty else {
             label.text = "Please, fill in both fields."
             return
         }
-        var a = UserDefaults.standard.string(forKey: username)
+        
         guard UserDefaults.standard.string(forKey: username) == nil
-        else
-        {
+        else {
             label.text = "Username is already taken."
             return
         }
@@ -49,14 +47,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func signInClicked(_ sender: Any) {
-        guard let username = textField.text ,let password = passField.text, username != "", password != "" else
-        {
+        guard let username = textField.text ,let password = passField.text, !username.isEmpty, !password.isEmpty else {
             label.text = "Please, fill in both fields."
             return
         }
         
-        guard let currentUserPassword = UserDefaults.standard.string(forKey: username) else
-        {
+        guard let currentUserPassword = UserDefaults.standard.string(forKey: username) else {
             label.text = "User '\(username)' does not exist."
             return
         }
