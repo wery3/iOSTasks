@@ -15,15 +15,17 @@ protocol CinemaTableViewCellDelegate: class {
 class CinemaTableViewCell: UITableViewCell {
 
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+
     
     weak var delegate: CinemaTableViewCellDelegate?
+    
     @IBOutlet weak var cinemaImg: UIImageView!
     @IBOutlet weak var workingHours: UILabel!
     @IBOutlet weak var title: UILabel!
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+    }
     
     func update(with cinema: Cinema) {
         cinemaImg.image = cinema.picture
@@ -31,11 +33,8 @@ class CinemaTableViewCell: UITableViewCell {
         title.text = cinema.title
     }
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    @IBAction func didTapOn(_ sender: Any) {
+        delegate?.didTapFrom(cell: self)
     }
-    
 
 }

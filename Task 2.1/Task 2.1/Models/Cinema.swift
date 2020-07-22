@@ -11,6 +11,9 @@ import UIKit
 struct Cinema {
     var title: String
     var picture: UIImage?
+    var picture2: UIImage?
     var address: String
     var workingHours: String
+    var parkingPlaces: String
+    var phoneNumber: String
 }

@@ -9,7 +9,14 @@
 import UIKit
 
 class FilmsTableViewController: UITableViewController {
-
+    
+    var films = [
+        Film(title: "Tomb Rider", showTime:"14:00"),
+        Film(title: "The Bourne Legacy", showTime: "15:00"),
+        Film(title: "Ice Age 4", showTime: "16:00"),
+        Film(title: "Three billboards outside Ebbing, Missouri", showTime: "17:00")
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,6 +39,13 @@ class FilmsTableViewController: UITableViewController {
         return 0
     }
 
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FilmCell", for: indexPath) as? FilmTableViewCell
+        let film = films[indexPath.row]
+        cell?.update(with: film)
+        
+        return cell ?? UITableViewCell()
+    }
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)

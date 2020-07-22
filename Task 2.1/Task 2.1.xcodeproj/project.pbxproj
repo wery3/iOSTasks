@@ -93,7 +93,6 @@
 		3A5A8BF124B5B23300008066 = {
 			isa = PBXGroup;
 			children = (
-				3A44543D24B8571400C1A0A6 /* FilmsTableViewController.swift */,
 				3A5A8BFC24B5B23300008066 /* Task 2.1 */,
 				3A5A8C1324B5B23800008066 /* Task 2.1Tests */,
 				3A5A8C1E24B5B23800008066 /* Task 2.1UITests */,
@@ -114,6 +113,7 @@
 		3A5A8BFC24B5B23300008066 /* Task 2.1 */ = {
 			isa = PBXGroup;
 			children = (
+				3A44543D24B8571400C1A0A6 /* FilmsTableViewController.swift */,
 				3A5A8C3D24B851AE00008066 /* CinamaTableViewController.swift */,
 				3A5A8C3524B847FE00008066 /* CinemaTableViewCell.swift */,
 				3A5A8BFD24B5B23300008066 /* AppDelegate.swift */,
