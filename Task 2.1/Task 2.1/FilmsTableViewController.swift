@@ -16,10 +16,11 @@ class FilmsTableViewController: UITableViewController {
         Film(title: "Ice Age 4", showTime: "16:00"),
         Film(title: "Three billboards outside Ebbing, Missouri", showTime: "17:00")
     ]
+    var cinema: Cinema?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        updateNav()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -29,14 +30,20 @@ class FilmsTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
+    func updateNav(){
+        guard let currentCinema = cinema else {return}
+        self.navigationItem.title = currentCinema.title
+        self.navigationItem.backBarButtonItem?.title = "Back"
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 4
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

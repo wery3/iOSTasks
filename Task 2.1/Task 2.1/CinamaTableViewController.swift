@@ -60,7 +60,7 @@ class CinamaTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cinemaCell", for: indexPath) as! CinemaTableViewCell
         let cinema = cinemas[indexPath.row]
         cell.update(with: cinema)
-        //cell.delegate = self
+        cell.delegate = self
         
         return cell
     }
@@ -69,10 +69,10 @@ class CinamaTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let cinema = selectedCinema else {return}
         
-        //if segue.identifier == "ProgramSegue" {
-        //    let destionation = segue.destination as? FilmsTableViewController
-         //   destionation?.cinema = cinema
-        //}
+        if segue.identifier == "ProgramSegue" {
+            let destionation = segue.destination as? FilmsTableViewController
+        destionation?.cinema = cinema
+        }
         
         if segue.identifier == "InfoSegue" {
             let destination = segue.destination as? DetailsViewController

@@ -26,13 +26,13 @@ class DetailsViewController: UIViewController {
     }
     
     private func updateDetails() {
-        guard let currentCinema = cinema else {
-            return}
+        guard let currentCinema = cinema else {return}
             img1.image  = currentCinema.picture
             img2.image = currentCinema.picture2
             address.text = currentCinema.address
             workingHours.text = currentCinema.workingHours
-            parkingPlaces.text = "Parking places: \n" + currentCinema.parkingPlaces
+            parkingPlaces.text = "Parking places:" + currentCinema.parkingPlaces
+        telephoneNumber.text = currentCinema.phoneNumber
         navigationItem.title = currentCinema.title
         navigationItem.backBarButtonItem?.title = "Back"
     }

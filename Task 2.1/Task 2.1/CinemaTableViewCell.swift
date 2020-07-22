@@ -33,8 +33,12 @@ class CinemaTableViewCell: UITableViewCell {
         title.text = cinema.title
     }
     
-    @IBAction func didTapOn(_ sender: Any) {
+    @IBAction func didTapOnInfo(_ sender: Any) {
         delegate?.didTapFrom(cell: self)
     }
 
+    @IBAction func didTapOnProgram(_ sender: Any) {
+        delegate?.didTapFrom(cell: self)
+    }
+    
 }

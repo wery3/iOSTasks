@@ -17,6 +17,7 @@ class FilmTableViewCell: UITableViewCell {
     func update(with film: Film) {
         title.text = film.title
         workingHours.text = film.showTime
+        
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
