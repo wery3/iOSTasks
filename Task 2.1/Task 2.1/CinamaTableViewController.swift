@@ -34,6 +34,7 @@ class CinamaTableViewController: UITableViewController {
            phoneNumber: "08784423312")
     ]
     
+    var reservations: [Ticket] = []
     var selectedCinema: Cinema?
     
     override func viewDidLoad() {
@@ -43,26 +44,36 @@ class CinamaTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
             return cinemas.count
+        case 1:
+            return reservations.count
         default:
             return 0
         }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cinemaCell", for: indexPath) as! CinemaTableViewCell
-        let cinema = cinemas[indexPath.row]
-        cell.update(with: cinema)
-        cell.delegate = self
-        
-        return cell
+        var cell = UITableViewCell()
+        if indexPath.section == 0{
+            let cinemaCell = tableView.dequeueReusableCell(withIdentifier: "cinemaCell", for: indexPath) as! CinemaTableViewCell
+            let cinema = cinemas[indexPath.row]
+            cinemaCell.update(with: cinema)
+            cinemaCell.delegate = self
+            cell = cinemaCell
+        } else if  indexPath.section == 1 {
+            
+            let reservationCell = tableView.dequeueReusableCell(withIdentifier: "reservationCell", for: indexPath) as! ReservationTableViewCell
+            let ticket = reservations[indexPath.row]
+            reservationCell.update(with: ticket)
+            cell = reservationCell
+        }
+            return cell
     }
     
     // MARK: - Navigation

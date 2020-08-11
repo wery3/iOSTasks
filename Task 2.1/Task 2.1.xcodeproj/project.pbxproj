@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A391D6A24D047FB00E5A6E2 /* ReservationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A391D6924D047FB00E5A6E2 /* ReservationTableViewCell.swift */; };
+		3A391D6E24D0498800E5A6E2 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A391D6D24D0498800E5A6E2 /* File.swift */; };
 		3A44543E24B8571400C1A0A6 /* FilmsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A44543D24B8571400C1A0A6 /* FilmsTableViewController.swift */; };
 		3A44544024B859FF00C1A0A6 /* FilmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A44543F24B859FF00C1A0A6 /* FilmTableViewCell.swift */; };
 		3A44544224B85A1200C1A0A6 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A44544124B85A1200C1A0A6 /* Film.swift */; };
@@ -42,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3A391D6924D047FB00E5A6E2 /* ReservationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationTableViewCell.swift; sourceTree = "<group>"; };
+		3A391D6D24D0498800E5A6E2 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		3A44543D24B8571400C1A0A6 /* FilmsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsTableViewController.swift; sourceTree = "<group>"; };
 		3A44543F24B859FF00C1A0A6 /* FilmTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmTableViewCell.swift; sourceTree = "<group>"; };
 		3A44544124B85A1200C1A0A6 /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
@@ -113,13 +117,13 @@
 		3A5A8BFC24B5B23300008066 /* Task 2.1 */ = {
 			isa = PBXGroup;
 			children = (
-				3A44543D24B8571400C1A0A6 /* FilmsTableViewController.swift */,
 				3A5A8C3D24B851AE00008066 /* CinamaTableViewController.swift */,
 				3A5A8C3524B847FE00008066 /* CinemaTableViewCell.swift */,
 				3A5A8BFD24B5B23300008066 /* AppDelegate.swift */,
 				3A5A8BFF24B5B23300008066 /* SceneDelegate.swift */,
 				3A5A8C0324B5B23300008066 /* Main.storyboard */,
 				3A44544524B85A7200C1A0A6 /* DetailsViewController.swift */,
+				3A44543D24B8571400C1A0A6 /* FilmsTableViewController.swift */,
 				3A44543F24B859FF00C1A0A6 /* FilmTableViewCell.swift */,
 				3A44544124B85A1200C1A0A6 /* Film.swift */,
 				3A44544324B85A4D00C1A0A6 /* ReservationViewController.swift */,
@@ -127,6 +131,8 @@
 				3A5A8C0824B5B23800008066 /* LaunchScreen.storyboard */,
 				3A5A8C0B24B5B23800008066 /* Info.plist */,
 				3A5A8C3124B6F8A000008066 /* Cinema.swift */,
+				3A391D6924D047FB00E5A6E2 /* ReservationTableViewCell.swift */,
+				3A391D6D24D0498800E5A6E2 /* File.swift */,
 			);
 			path = "Task 2.1";
 			sourceTree = "<group>";
@@ -281,9 +287,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A44544024B859FF00C1A0A6 /* FilmTableViewCell.swift in Sources */,
+				3A391D6E24D0498800E5A6E2 /* File.swift in Sources */,
 				3A5A8C3224B6F8A000008066 /* Cinema.swift in Sources */,
 				3A44544424B85A4D00C1A0A6 /* ReservationViewController.swift in Sources */,
 				3A5A8C3624B847FE00008066 /* CinemaTableViewCell.swift in Sources */,
+				3A391D6A24D047FB00E5A6E2 /* ReservationTableViewCell.swift in Sources */,
 				3A5A8BFE24B5B23300008066 /* AppDelegate.swift in Sources */,
 				3A44543E24B8571400C1A0A6 /* FilmsTableViewController.swift in Sources */,
 				3A44544224B85A1200C1A0A6 /* Film.swift in Sources */,

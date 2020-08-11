@@ -16,6 +16,15 @@ class ReservationViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    var ticket: Ticket?
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            guard segue.identifier == "ReservationSegue" else {return}
+        
+            let destionation = segue.destination as? CinamaTableViewController
+            destionation?.reservations.append(ticket!)
+        }
+    }
 
     /*
     // MARK: - Navigation
@@ -27,4 +36,4 @@ class ReservationViewController: UIViewController {
     }
     */
 
-}
+

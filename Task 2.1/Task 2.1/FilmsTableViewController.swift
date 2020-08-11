@@ -53,6 +53,14 @@ class FilmsTableViewController: UITableViewController {
         
         return cell ?? UITableViewCell()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destination = segue.destination as? ReservationViewController else {return}
+
+        let indexPath = tableView.indexPathForSelectedRow!
+        destination.ticket = Ticket(cinema: cinema!, film: films[indexPath.row])
+        
+    }
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
